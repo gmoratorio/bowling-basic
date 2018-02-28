@@ -42,9 +42,6 @@ class Frame {
                 if (!this.hasExtraAttempt) {
                     this.frameStillInPlay = false;
                     this.frameBonus = ROUND_BONUS.STRIKE;
-                } else {
-                    this.frameBonus = ROUND_BONUS.FINAL;
-                    this.firstAttempt.finalBonus = ROUND_BONUS.STRIKE;
                 }
 
                 return true;
@@ -73,9 +70,6 @@ class Frame {
                     if (!this.hasExtraAttempt) {
                         this.frameStillInPlay = false;
                         this.frameBonus = ROUND_BONUS.SPARE;
-                    } else {
-                        this.frameBonus = ROUND_BONUS.FINAL;
-                        this.secondAttempt.finalBonus = ROUND_BONUS.SPARE;
                     }
 
                     return true;
@@ -96,8 +90,6 @@ class Frame {
                 // it's the last frame, you got a strike on the first attempt
                 // and you got another strike on this attempt
                 this.secondAttempt.score = score;
-                this.frameBonus = ROUND_BONUS.FINAL;
-                this.secondAttempt.finalBonus = ROUND_BONUS.STRIKE;
                 return true;
             } else {
                 return false;
