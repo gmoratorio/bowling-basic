@@ -1,6 +1,6 @@
 # Bowling - Basic!
 
-## The most BASIC kind of bowling...
+## The most basic kind of bowling...
 
 This game of bowling is implemented in vanilla JavaScript, with no third party libraries, and runs entirely through window promps.
 
